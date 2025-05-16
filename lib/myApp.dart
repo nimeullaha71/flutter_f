@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Home.dart';
+import 'Module9_class2.dart';
 import 'module9-Class1.dart';
 
 class myApp extends StatelessWidget {
@@ -15,7 +16,7 @@ class myApp extends StatelessWidget {
             centerTitle: true,
           )),
       title: "Flutter app",
-      home: layoutBuilder(),
+      home: module9(),
     );
   }
 }
