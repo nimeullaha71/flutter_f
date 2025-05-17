@@ -12,8 +12,8 @@ class myApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(
-      builder: (context, sizingInformation) {
+    return Sizer(
+      builder: (context, orientation, deviceType) {
         return MaterialApp(
           useInheritedMediaQuery: true,
           locale: DevicePreview.locale(context),
