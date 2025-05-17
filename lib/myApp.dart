@@ -1,22 +1,33 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:sizer/sizer.dart';
 import 'Home.dart';
 import 'Module9_class2.dart';
 import 'module9-Class1.dart';
+import 'module9-class3.dart';
 
 class myApp extends StatelessWidget {
   const myApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-          primaryColor: Colors.red,
-          appBarTheme: AppBarTheme(
-            color: Colors.red,
-            centerTitle: true,
-          )),
-      title: "Flutter app",
-      home: module9(),
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) {
+        return MaterialApp(
+          useInheritedMediaQuery: true,
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          theme: ThemeData(
+              primaryColor: Colors.red,
+              appBarTheme: AppBarTheme(
+                color: Colors.red,
+                centerTitle: true,
+              )),
+          title: "Flutter app",
+          home: Module9class3(),
+        );
+      }
     );
   }
 }
