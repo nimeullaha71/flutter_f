@@ -4,6 +4,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:sizer/sizer.dart';
 import 'Home.dart';
 import 'Module9_class2.dart';
+import 'calculatrApp.dart';
 import 'module11_class1.dart';
 import 'module9-Class1.dart';
 import 'module9-class3.dart';
@@ -24,9 +25,18 @@ class myApp extends StatelessWidget {
               appBarTheme: AppBarTheme(
                 color: Colors.red,
                 centerTitle: true,
-              )),
+              ),
+            scaffoldBackgroundColor: Colors.white,
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurpleAccent,
+                foregroundColor: Colors.white
+              )
+            )
+          ),
+
           title: "Flutter app",
-          home: module11Class1(),
+          home: calculatorApp(),
         );
       }
     );
