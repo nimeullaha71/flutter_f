@@ -4,6 +4,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:sizer/sizer.dart';
 import 'Home.dart';
 import 'Module9_class2.dart';
+import 'module11_class1.dart';
 import 'module9-Class1.dart';
 import 'module9-class3.dart';
 
@@ -25,7 +26,7 @@ class myApp extends StatelessWidget {
                 centerTitle: true,
               )),
           title: "Flutter app",
-          home: Module9class3(),
+          home: module11Class1(),
         );
       }
     );
