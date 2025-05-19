@@ -7,6 +7,7 @@ import 'Home.dart';
 import 'Module9_class2.dart';
 import 'calculatrApp.dart';
 import 'module11_class1.dart';
+import 'module12_class1.dart';
 import 'module9-Class1.dart';
 import 'module9-class3.dart';
 
@@ -22,12 +23,13 @@ class myApp extends StatelessWidget {
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
           theme: ThemeData(
+            brightness: Brightness.dark,
               primaryColor: Colors.red,
               appBarTheme: AppBarTheme(
                 color: Colors.red,
                 centerTitle: true,
               ),
-            scaffoldBackgroundColor: Colors.white,
+            //scaffoldBackgroundColor: Colors.white,
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.deepPurpleAccent,
@@ -37,7 +39,7 @@ class myApp extends StatelessWidget {
           ),
 
           title: "Flutter app",
-          home: waterTracker(),
+          home: ExpenseTracker(),
         );
       }
     );
