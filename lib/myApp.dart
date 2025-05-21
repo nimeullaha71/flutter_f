@@ -8,6 +8,7 @@ import 'Module9_class2.dart';
 import 'calculatrApp.dart';
 import 'module11_class1.dart';
 import 'module12_class1.dart';
+import 'module12_class2.dart';
 import 'module9-Class1.dart';
 import 'module9-class3.dart';
 
@@ -19,14 +20,15 @@ class myApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           useInheritedMediaQuery: true,
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
           theme: ThemeData(
-            brightness: Brightness.dark,
-              primaryColor: Colors.red,
+            brightness: Brightness.light,
+              primaryColor: Colors.orange,
               appBarTheme: AppBarTheme(
-                color: Colors.red,
+                color: Colors.orange,
                 centerTitle: true,
               ),
             //scaffoldBackgroundColor: Colors.white,
@@ -39,7 +41,7 @@ class myApp extends StatelessWidget {
           ),
 
           title: "Flutter app",
-          home: ExpenseTracker(),
+          home: TodoScreen(),
         );
       }
     );
